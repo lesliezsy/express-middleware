@@ -19,7 +19,7 @@
   morgan.token('date', (req, res, tz) => {
     return moment().tz(tz).format('YYYY-MM-DD HH:mm:ss');
   })
-  morgan.format('myformat', 'timestamp: :date[Asia/Taipei] | method: :method | from: :url | response time: :response-time ms');
+  morgan.format('myformat', ':date[Asia/Taipei] | method: :method | from: :url | total time: :total-time ms');
   
   app.use(morgan('myformat'))
 
